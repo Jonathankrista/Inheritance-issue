@@ -1,0 +1,449 @@
+.grid *, .grid *:after, .grid *:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: '';
+}
+.clearfix:after {
+  clear: both;
+}
+#multiOffers {
+  margin: 10px 0px 10px 0px;
+}
+.grid {
+  position: relative;
+  clear: both;
+  margin: 0px auto;
+  padding: 0px;
+  max-width: 890px;
+  max-height: 350px;
+  list-style: none;
+  text-align: center;
+}
+
+/* Common style */
+
+.grid figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 0px;
+  width: 100%;
+  height: auto;
+  background: #3085a3;
+  text-align: center;
+  cursor: pointer;
+}
+.grid figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+  opacity: 0.8;
+}
+.grid figure figcaption {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.grid figure figcaption::before, .grid figure figcaption::after {
+  pointer-events: none;
+}
+.grid figure figcaption, .grid figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Cover whole offer with anchor link */
+
+.grid figure figcaption > a {
+  z-index: 10;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+.grid figure h2, .grid figure p {
+  margin: 0px;
+}
+.grid figure p {
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-family: 'roboto', sans-serif;
+}
+
+/*---------------*/
+/***** Offer Hover Effects *****/
+/*---------------*/
+
+figure.offer {
+  background: #eee;
+  margin-bottom: 10px;
+}
+figure.offer img {
+  opacity: 1;
+}
+figure.offer figcaption::before {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.4);
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.15s;
+  transition: opacity 0.35s, transform 0.15s;
+}
+figure.offer .logo, figure.offer .marketingText, figure.offer p, figure.offer span {
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  min-width: auto;
+  min-height: auto;
+}
+
+figure.offer h2 {
+	position: absolute;
+  margin: 0px;
+	-webkit-transform: none);
+  transform: none;
+  /*-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;*/
+}
+
+figure.offer p {
+	position: absolute;
+}
+
+figure.offer:hover span {
+	-webkit-animation-name: example;
+	-webkit-animation-duration: 0.35s;
+}
+
+figure.offer span {
+  opacity: 0;
+  font-family: 'roboto-condensed-regular', serif;
+  font-size: 16px;
+  padding: 5px 10px;
+  border: 2px solid #fff;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+	z-index: 1px;
+}
+
+figure.offer:hover figcaption::before, figure.offer:hover span {
+  opacity: 1;
+}
+figure.offer:hover figcaption {
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+figure.offer:hover img {
+  opacity: 1;
+}
+figure.fullWitdh-halfHeight {
+  width: 890px;
+  height: 175px;
+}
+figure.halfWitdh-halfHeight {
+  width: 440px;
+  height: 175px;
+}
+figure.halfWitdh-fullHeight {
+  width: 440px;
+  height: 350px;
+}
+figure.twothirds-fullHeight {
+  width: 590px;
+  height: 350px;
+}
+figure.onethird-fullHeight {
+  width: 290px;
+  height: 350px;
+}
+figure.a8 {
+  width: 290px;
+  height: 175px;
+}
+figure.left {
+  margin-right: 10px;
+}
+
+/*---------------*/
+/* Offer Transitions & Styles *****/
+/*---------------*/
+
+#heroOffer .logo {
+  top: 30px;
+  left: 160px;
+  width: auto;
+  height: 25px;
+}
+#heroOffer:hover .logo {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+}
+#heroOffer h2 {
+  font-family: 'roboto-slab-regular', serif;
+  font-size: 16px;
+  line-height: 20px;
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  top: 25px;
+  right: 120px;
+}
+
+#heroOffer span {
+  opacity: 1;
+  margin: 0px 0px 0px -55px;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  width: 110px;
+}
+
+
+#casualBoots h2 {
+  color: #000;
+  top: 125px;
+  left: 0px;
+  width: 250px;
+  text-align: right;
+  padding-right: 8px;
+  font-size: 34px;
+  line-height: 24px;
+}
+#casualBoots p {
+  background-color: #000;
+  color: #fff;
+  width: 250px;
+  text-align: right;
+  padding: 10px;
+  top: 148px;
+  left: 0px;
+	z-index: 10;
+}
+#casualBoots span {
+  top: 148px;
+  left: 260px;
+	font-size: 14px;
+	padding: 10px;
+	background-color: #7b2d3e;
+	color: #fff;
+	border: none;
+	z-index: 1;
+}
+#casualBoots:hover span {
+	animation-name: casualBtn;
+	animation-duration: 0.35s;
+}
+
+@keyframes casualBtn {
+  from {left: 100px;}
+  to {left: 260px;}
+}
+@-webkit-keyframes casualBtn {
+  from {left: 100px;}
+  to {left: 260px;}
+}
+
+
+#rainBoots h2 {
+  color: #29ABE2;
+  width: 220px;
+  text-align: left;
+  padding-left: 8px;
+  font-size: 30px;
+  line-height: 20px;
+	top: 190px;
+  right: 0px;
+}
+#rainBoots p {
+  background-color: #29ABE2;
+  color: #fff;
+  width: 220px;
+  text-align: left;
+  padding: 10px;
+	top: 210px;
+  right: 0px;
+	z-index: 10;
+}
+
+#rainBoots span {
+	top: 260px;
+  left: 70px;
+	font-size: 14px;
+	padding: 10px;
+	background-color: #e24f4b;
+	color: #fff;
+	border: none;
+	z-index: 1;
+}
+
+#rainBoots:hover span {
+	animation-name: rainbootsBtn;
+	animation-duration: 0.35s;
+}
+
+@keyframes rainbootsBtn {
+  from {top: 210px;}
+  to {top: 260px;}
+}
+@-webkit-keyframes rainbootsBtn {
+  from {top: 210px;}
+  to {top: 260px;}
+}
+
+
+#drmartens .logo {
+  top: 30px;
+  left: 120px;
+  width: auto;
+  height: 100px;
+}
+#drmartens h2 {
+  margin: 0px;
+  padding: 12px;
+  top: 65px;
+  right: 180px;
+  font-family: 'caveat-bold', sans-serif;
+  color: #000;
+  background-color: #FEE401;
+  font-size: 25px;
+	z-index: 10;
+}
+
+#drmartens span {
+	top: 65px;
+  right: 80px;
+	font-size: 15px;
+	padding: 12px;
+	background-color: #000;
+	color: #fff;
+	border: none;
+	z-index: 1;
+}
+
+#drmartens:hover span {
+	animation-name: drmartensBtn;
+	animation-duration: 0.35s;
+}
+
+@keyframes drmartensBtn {
+  from {right: 180px;}
+  to {right: 80px;}
+}
+@-webkit-keyframes drmartensBtn {
+  from {right: 180px;}
+  to {right: 80px;}
+}
+
+.a8:hover figcaption::before {
+	box-shadow: none;
+}
+
+.a8 h2 {
+  margin: 0px;
+  padding: 0px;
+  top: 10px;
+  left: 10px;
+  font-family: 'roboto-light', sans-serif;
+  font-size: 15px;
+}
+.a8 p {
+  margin: 0px;
+  padding: 0px;
+  top: 10px;
+  right: 10px;
+  font-family: 'roboto-condensed-bold', sans-serif !important;
+  font-size: 16px;
+  letter-spacing: 0px !important;
+}
+
+.a8 span {
+	top: 70px;
+  left: 50%;
+	margin-left: -50px !important;
+	width: 100px;
+	font-size: 15px;
+	padding: 12px !important;
+	color: #fff;
+	z-index: 1;
+	background-color: #222;
+	border: none !important;
+}
+
+
+#sorel .logo {
+  top: 25px;
+  right: 25px;
+  width: auto;
+  height: 70px;
+}
+#sorel .marketingText {
+  top: 35px;
+  left: 110px;
+  width: auto;
+  height: 135px;
+}
+
+#bogs .logo {
+  top: 150px;
+  left: 65px;
+  width: auto;
+  height: 35px;
+}
+
+#bogs span {
+	top: 150px;
+	right: 90px;
+	font-size: 16px;
+	padding: 10px;
+	background-color: #F48024;
+	color: #FFF;
+	border: 3px solid #FFF;
+	z-index: 1;
+}
+
+#bogs:hover span {
+	animation-name: bogsBtn;
+	animation-duration: 0.35s;
+}
+
+@keyframes bogsBtn {
+  from {right: 40px;}
+  to {right: 90px;}
+}
+@-webkit-keyframes bogsBtn {
+  from {right: 40px;}
+  to {right:90px;}
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 50em) {
+  #multiOffers {
+    text-align: center;
+		margin-top: 0px;
+  }
+  .grid figure {
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  #hero img {
+    width: 100%;
+  }
+}
